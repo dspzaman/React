@@ -1,0 +1,19 @@
+import { FC, ReactNode } from "react";
+
+interface imageProp {
+    image: {
+        src: string;
+        alt: string;
+    }
+    children: ReactNode
+}
+const Header: FC<imageProp> = ({image, children}) => {
+    return(
+        <header>
+        <img src={image.src} alt={image.alt} />
+        {children}
+        </header>
+    )
+}
+
+export default Header;
